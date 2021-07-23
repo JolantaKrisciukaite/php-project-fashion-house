@@ -24,7 +24,7 @@ class MasterController extends Controller
      */
     public function create()
     {
-        //
+        return view('master.create');
     }
 
     /**
