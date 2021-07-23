@@ -14,8 +14,10 @@ class CreateMastersTable extends Migration
     public function up()
     {
         Schema::create('masters', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+                $table->id();
+                $table->string('name', 64);
+                $table->string('surname', 64);
+                $table->timestamps();
         });
     }
 
