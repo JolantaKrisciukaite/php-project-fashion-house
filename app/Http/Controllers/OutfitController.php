@@ -97,11 +97,7 @@ class OutfitController extends Controller
      */
     public function destroy(Outfit $outfit)
     {
-        if($outfit->masterOutfits->count()){
-            return 'Trinti negalima, siuvėjas turi nebaigtų kurti aprėdalų 😛';
-        }
         $outfit->delete();
         return redirect()->route('outfit.index');
- 
     }
 }

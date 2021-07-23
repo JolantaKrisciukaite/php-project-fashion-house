@@ -89,8 +89,10 @@ class MasterController extends Controller
      */
     public function destroy(Master $master)
     {
+        if($master->masterOutfits->count()){
+            return 'Trinti negalima, siuvėjas turi nebaigtų kurti aprėdalų 😛';
+        }
         $master->delete();
         return redirect()->route('master.index');
-
     }
 }
