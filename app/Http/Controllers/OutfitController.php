@@ -24,7 +24,7 @@ class OutfitController extends Controller
      */
     public function create()
     {
-        //
+        return view('outfit.create');
     }
 
     /**
