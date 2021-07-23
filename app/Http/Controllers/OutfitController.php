@@ -37,7 +37,14 @@ class OutfitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $outfit = new Outfit;
+        $outfit->title = $request->outfit_title;
+        $outfit->isbn = $request->outfit_isbn;
+        $outfit->pages = $request->outfit_pages;
+        $outfit->about = $request->outfit_about;
+        $outfit->author_id = $request->author_id;
+        $outfit->save();
+        return redirect()->route('outfit.index');
     }
 
     /**
