@@ -14,7 +14,8 @@ class MasterController extends Controller
      */
     public function index()
     {
-        //
+        $masters = Author::all();
+        return view('master.index', ['masters' => $masters]);
     }
 
     /**
@@ -35,7 +36,11 @@ class MasterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $master = new Master;
+        $master->name = $request->master_name;
+        $master->surname = $request->master_surname;
+        $master->save();
+        return redirect()->route('master.index');
     }
 
     /**
