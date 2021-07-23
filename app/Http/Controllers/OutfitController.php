@@ -15,7 +15,8 @@ class OutfitController extends Controller
      */
     public function index()
     {
-        //
+        $outfits = Outfit::all();
+        return view('outfit.index', ['outfits' => $outfits]);
     }
 
     /**

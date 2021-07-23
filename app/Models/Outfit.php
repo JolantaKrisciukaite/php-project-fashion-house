@@ -9,3 +9,9 @@ class Outfit extends Model
 {
     use HasFactory;
 }
+
+public function outfitMaster()
+   {
+       return $this->belongsTo('App\Models\Master', 'master_id', 'id');
+   }
+
