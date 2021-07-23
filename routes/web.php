@@ -34,12 +34,12 @@ Route::group(['prefix' => 'masters'], function(){
 });
 
 Route::group(['prefix' => 'outfits'], function(){
-    Route::get('', [BookController::class, 'index'])->name('outfit.index');
-    Route::get('create', [BookController::class, 'create'])->name('outfit.create');
-    Route::post('store', [BookController::class, 'store'])->name('outfit.store');
-    Route::get('edit/{outfit}', [BookController::class, 'edit'])->name('outfit.edit');
-    Route::post('update/{outfit}', [BookController::class, 'update'])->name('outfit.update');
-    Route::post('delete/{outfit}', [BookController::class, 'destroy'])->name('outfit.destroy');
-    Route::get('show/{outfit}', [BookController::class, 'show'])->name('outfit.show');
+    Route::get('', [OutfitController::class, 'index'])->name('outfit.index');
+    Route::get('create', [OutfitController::class, 'create'])->name('outfit.create');
+    Route::post('store', [OutfitController::class, 'store'])->name('outfit.store');
+    Route::get('edit/{outfit}', [OutfitController::class, 'edit'])->name('outfit.edit');
+    Route::post('update/{outfit}', [OutfitController::class, 'update'])->name('outfit.update');
+    Route::post('delete/{outfit}', [OutfitController::class, 'destroy'])->name('outfit.destroy');
+    Route::get('show/{outfit}', [OutfitController::class, 'show'])->name('outfit.show');
  });
  
