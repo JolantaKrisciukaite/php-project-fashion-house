@@ -8,10 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Outfit extends Model
 {
     use HasFactory;
+
+    public function outfitMaster()
+    {
+        return $this->belongsTo('App\Models\Master', 'master_id', 'id');
+    }
 }
 
-public function outfitMaster()
-   {
-       return $this->belongsTo('App\Models\Master', 'master_id', 'id');
-   }
+
+
+
 

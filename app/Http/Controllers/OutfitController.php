@@ -67,7 +67,8 @@ class OutfitController extends Controller
      */
     public function edit(Outfit $outfit)
     {
-        //
+        $masters = Master::all();
+        return view('outfit.edit', ['outfit' => $outfit, 'masters' => $masters]);
     }
 
     /**
@@ -79,7 +80,13 @@ class OutfitController extends Controller
      */
     public function update(Request $request, Outfit $outfit)
     {
-        //
+        $outfit->type = $request->outfit_type;
+        $outfit->color = $request->outfit_color;
+        $outfit->size = $request->outfit_size;
+        $outfit->about = $request->outfit_about;
+        $outfit->master_id = $request->master_id;
+        $outfit->save();
+        return redirect()->route('outfit.index');
     }
 
     /**
@@ -90,6 +97,11 @@ class OutfitController extends Controller
      */
     public function destroy(Outfit $outfit)
     {
-        //
+        if($outfit->masterOutfits->count()){
+            return 'Trinti negalima, siuvėjas turi nebaigtų kurti aprėdalų 😛';
+        }
+        $outfit->delete();
+        return redirect()->route('outfit.index');
+ 
     }
 }

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Master extends Model
 {
     use HasFactory;
+
+    public function masterOutfits()
+    {
+        return $this->hasMany('App\Models\Outfit', 'master_id', 'id');
+    }
 }
