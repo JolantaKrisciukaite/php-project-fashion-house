@@ -20,6 +20,7 @@ class CreateOutfitsTable extends Migration
             $table->integer('size');
             $table->text('about');
             $table->unsignedBigInteger('master_id');
+            $table->foreign('master_id')->references('id')->on('masters');
             $table->timestamps();
         });
     }
