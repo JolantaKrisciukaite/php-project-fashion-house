@@ -1,7 +1,7 @@
 <form method="POST" action="{{route('outfit.store')}}">
-    Title: <input type="text" name="outfit_title">
-    ISBN: <input type="text" name="outfit_isbn">
-    Pages: <input type="text" name="outfit_pages">
+    Type: <input type="text" name="outfit_type">
+    Color: <input type="text" name="outfit_color">
+    Size: <input type="text" name="outfit_size">
     About: <textarea name="outfit_about"></textarea>
     <select name="master_id">
         @foreach ($masters as $master)
