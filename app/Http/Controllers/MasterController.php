@@ -93,6 +93,6 @@ class MasterController extends Controller
             return 'Trinti negalima, siuvėjas turi nebaigtų kurti aprėdalų 😛';
         }
         $master->delete();
-        return redirect()->route('master.index');
+        
     }
 }
