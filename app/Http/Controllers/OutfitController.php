@@ -24,7 +24,8 @@ class OutfitController extends Controller
      */
     public function create()
     {
-        return view('outfit.create');
+        $masters = Master::all();
+        return view('outfit.create', ['masters' => $masters]);
     }
 
     /**
