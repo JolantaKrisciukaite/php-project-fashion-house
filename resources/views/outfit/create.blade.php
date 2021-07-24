@@ -24,9 +24,10 @@
                         <label>Size:</label>
                         <input type="text" name="outfit_size" class="form-control" value="{{old('outfit_size')}}">
                     </div>
-
-                    About: <textarea name="outfit_about" id="summernote" value="{{old('outfit_about')}}"></textarea>
-                    <select class="index" name="master_id">
+                    
+                    <span class="outfitCreateAbout">About: </span>
+                    <textarea name="outfit_about" id="summernote" value="{{old('outfit_about')}}"></textarea>
+                    <select class="index" name="master_id"><br>
                         @foreach ($masters as $master)
                             <option value="{{$master->id}}">{{$master->name}} {{$master->surname}}</option>
                         @endforeach
