@@ -12,12 +12,12 @@
 
                     <div class="form-group">
                         <label>Name:</label>
-                        <input type="text" name="master_name" class="form-control" value="{{$master->name}}">
+                        <input type="text" name="master_name" class="form-control" value="{{old('master_name', $master->name)}}">
                     </div>
 
                     <div class="form-group">
                         <label>Surname:</label>
-                        <input type="text" name="master_surname" class="form-control" value="{{$master->surname}}">
+                        <input type="text" name="master_surname" class="form-control" value="{{old('master_surname', $master->name)}}">
                     </div>
 
                     @csrf

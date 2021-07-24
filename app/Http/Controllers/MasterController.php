@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Master;
 use Illuminate\Http\Request;
+use Validator;
 
 class MasterController extends Controller
 {
@@ -36,6 +37,18 @@ class MasterController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(),
+        [
+            'master_name' => ['required', 'min:3', 'max:64'],
+            'master_surname' => ['required', 'min:3', 'max:64'],
+        ],
+        );
+
+        if ($validator->fails()) {
+            $request->flash();
+            return redirect()->back()->withErrors($validator);
+        }
+ 
         $master = new Master;
         $master->name = $request->master_name;
         $master->surname = $request->master_surname;
@@ -74,6 +87,18 @@ class MasterController extends Controller
      */
     public function update(Request $request, Master $master)
     {
+        $validator = Validator::make($request->all(),
+        [
+            'master_name' => ['required', 'min:3', 'max:64'],
+            'master_surname' => ['required', 'min:3', 'max:64'],
+        ],
+        );
+        
+        if ($validator->fails()) {
+            $request->flash();
+            return redirect()->back()->withErrors($validator);
+        }
+
         $master->name = $request->master_name;
         $master->surname = $request->master_surname;
         $master->save();
