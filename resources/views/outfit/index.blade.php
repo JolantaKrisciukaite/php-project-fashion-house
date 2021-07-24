@@ -10,7 +10,7 @@
                <div class="card-body">
                 @foreach ($outfits as $outfit)
                 <a href="{{route('outfit.edit',[$outfit])}}" class="form-control">{{$outfit->type}}</a>
-                <span>{{$outfit->outfitMaster->name}} {{$outfit->outfitMaster->surname}}</span>
+                <span class="outfitIndex">{{$outfit->outfitMaster->name}} {{$outfit->outfitMaster->surname}}</span>
                 <form method="POST" action="{{route('outfit.destroy', [$outfit])}}">
                  @csrf
                  <button class="deleteButton" type="submit">Delete</button>

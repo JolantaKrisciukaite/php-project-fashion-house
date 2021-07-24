@@ -21,7 +21,7 @@
                     </div>
 
                     @csrf
-                    <button type="submit">ADD</button>
+                    <button class="addButton" type="submit">Add</button>
                  </form>
                 
                </div>
