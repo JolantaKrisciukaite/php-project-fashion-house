@@ -13,7 +13,7 @@
                 <div class="index">{{$outfit->outfitMaster->name}} {{$outfit->outfitMaster->surname}}</div>
                 <form method="POST" action="{{route('outfit.destroy', [$outfit])}}">
                  @csrf
-                 <button class="deleteButton" type="submit">Delete</button>
+                 <button class="deleteButtonOutfit" type="submit">Delete</button>
                 </form>
                 <br>
               @endforeach
