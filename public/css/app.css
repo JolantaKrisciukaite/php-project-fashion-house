@@ -10137,7 +10137,6 @@ body {
   text-decoration: none;
   text-shadow: 0px 1px 0px #cc9f52;
   margin-top: 22px;
-  margin-left: 159px;
 }
 
 .addButton:hover {
@@ -10157,7 +10156,7 @@ body {
 .index {
   border: 1px solid #ADFF2F;
   border-radius: 6px;
-  padding: 6px 24px;
+  padding: 7px 21px;
   font-size: 15px;
   text-shadow: 0px 1px 0px #d2ff93;
   background-color: #f6fdec;
@@ -10177,6 +10176,6 @@ body {
   background-color: #f6fdec;
 }
 
-.outfitCreateAbout {
+.about {
   line-height: 35px;
 }

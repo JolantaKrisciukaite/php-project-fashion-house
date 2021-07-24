@@ -25,8 +25,9 @@
                         <input type="text" name="outfit_size" class="form-control" value="{{old('outfit_size', $outfit->size)}}">
                     </div>
                       
-                    About: <textarea name="outfit_about" id="summernote" value="{{old('outfit_about', $outfit->about)}}"></textarea>
-                    <select name="master_id">
+                    <span class="about">About: </span>
+                    <textarea name="outfit_about" id="summernote" value="{{old('outfit_about', $outfit->about)}}"></textarea><br>
+                    <select class="index" name="master_id">
                         @foreach ($masters as $master)
                             <option value="{{$master->id}}" @if($master->id == $outfit->master_id) selected @endif>
                                 {{$master->name}} {{$master->surname}}
