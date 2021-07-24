@@ -9,9 +9,22 @@
 
                <div class="card-body">
                 <form method="POST" action="{{route('outfit.update',[$outfit])}}">
-                    Type: <input type="text" name="outfit_type" value="{{$outfit->type}}">
-                    Color: <input type="text" name="outfit_color" value="{{$outfit->color}}">
-                    Size: <input type="text" name="outfit_size" value="{{$outfit->size}}">
+
+                    <div class="form-group">
+                        <label>Type</label>
+                        <input type="text" name="outfit_type" class="form-control" value="{{$outfit->type}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Color</label>
+                        <input type="text" name="outfit_color" class="form-control" value="{{$outfit->color}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Size</label>
+                        <input type="text" name="outfit_size" class="form-control" value="{{$outfit->size}}">
+                    </div>
+                      
                     About: <textarea name="outfit_about">{{$outfit->about}}</textarea>
                     <select name="master_id">
                         @foreach ($masters as $master)

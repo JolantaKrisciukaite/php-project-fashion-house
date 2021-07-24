@@ -45,7 +45,7 @@ class OutfitController extends Controller
         $outfit->about = $request->outfit_about;
         $outfit->master_id = $request->master_id;
         $outfit->save();
-        return redirect()->route('outfit.index');
+        return redirect()->route('outfit.index')->with('success_message', 'Naujas outfitas sėkmingai įrašytas! 🤪');
     }
 
     /**
@@ -86,7 +86,7 @@ class OutfitController extends Controller
         $outfit->about = $request->outfit_about;
         $outfit->master_id = $request->master_id;
         $outfit->save();
-        return redirect()->route('outfit.index');
+        return redirect()->route('outfit.index')->with('success_message', 'Outfitas sėkmingai atnaujintas! 😌');
     }
 
     /**
@@ -98,6 +98,6 @@ class OutfitController extends Controller
     public function destroy(Outfit $outfit)
     {
         $outfit->delete();
-        return redirect()->route('outfit.index');
+        return redirect()->route('outfit.index')->with('success_message', 'Outfitas sėkmingai ištrintas! 😊');
     }
 }
