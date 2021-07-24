@@ -9,7 +9,7 @@
 
                <div class="card-body">
                 @foreach ($outfits as $outfit)
-                <a href="{{route('outfit.edit',[$outfit])}}" class="form-control">{{$outfit->type}}</a>
+                <a href="{{route('outfit.edit',[$outfit])}}" class="form-control">{{$outfit->type}}</a><br>
                 <div class="index">{{$outfit->outfitMaster->name}} {{$outfit->outfitMaster->surname}}</div>
                 <form method="POST" action="{{route('outfit.destroy', [$outfit])}}">
                  @csrf
