@@ -9,7 +9,7 @@
 
                <div class="card-body">
                 @foreach ($masters as $master)
-                <a href="{{route('master.edit',[$master])}}">{{$master->name}} {{$master->surname}}</a>
+                <a href="{{route('master.edit',[$master])}}" class="form-control">{{$master->name}} {{$master->surname}}</a>
                 <form method="POST" action="{{route('master.destroy', $master)}}">
                  @csrf
                  <button type="submit">DELETE</button>
