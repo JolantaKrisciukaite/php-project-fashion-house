@@ -92,6 +92,14 @@ class MasterController extends Controller
             'master_name' => ['required', 'min:3', 'max:64'],
             'master_surname' => ['required', 'min:3', 'max:64'],
         ],
+
+        [
+            'master_name.min' => 'Vardą, minimaliai, turi sudaryti 3 raidės 😉',
+            'master_name.max' => 'Vardą, maksimaliai, turi sudaryti 64 raidės 😬',
+            'master_surname.min' => 'Pavardę, minimaliai, turi sudaryti 3 raidės 😎',
+            'master_surname.max' => 'Pavardę, maksimaliai, turi sudaryti 64 raidės 😏',
+        ]
+            
         );
         
         if ($validator->fails()) {
