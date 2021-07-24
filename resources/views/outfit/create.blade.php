@@ -12,7 +12,7 @@
                     Type: <input type="text" name="outfit_type">
                     Color: <input type="text" name="outfit_color">
                     Size: <input type="text" name="outfit_size">
-                    About: <textarea name="outfit_about"></textarea>
+                    About: <textarea name="outfit_about" id="summernote"></textarea>
                     <select name="master_id">
                         @foreach ($masters as $master)
                             <option value="{{$master->id}}">{{$master->name}} {{$master->surname}}</option>
@@ -27,6 +27,13 @@
        </div>
    </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+       $('#summernote').summernote();
+     });
+</script>
+    
 @endsection
 
  
