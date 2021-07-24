@@ -34,7 +34,7 @@
                         @endforeach
                 </select>
                     @csrf
-                    <button type="submit">EDIT</button>
+                    <button class="editButton" type="submit">Edit</button>
                 </form>
                 
                </div>
