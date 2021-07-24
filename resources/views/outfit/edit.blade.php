@@ -12,20 +12,20 @@
 
                     <div class="form-group">
                         <label>Type:</label>
-                        <input type="text" name="outfit_type" class="form-control" value="{{$outfit->type}}">
+                        <input type="text" name="outfit_type" class="form-control" value="{{old('outfit_type', $outfit->type)}}">
                     </div>
 
                     <div class="form-group">
                         <label>Color:</label>
-                        <input type="text" name="outfit_color" class="form-control" value="{{$outfit->color}}">
+                        <input type="text" name="outfit_color" class="form-control" value="{{old('outfit_color', $outfit->color)}}">
                     </div>
 
                     <div class="form-group">
                         <label>Size:</label>
-                        <input type="text" name="outfit_size" class="form-control" value="{{$outfit->size}}">
+                        <input type="text" name="outfit_size" class="form-control" value="{{old('outfit_size', $outfit->size)}}">
                     </div>
                       
-                    About: <textarea name="outfit_about" id="summernote">{{$outfit->about}}</textarea>
+                    About: <textarea name="outfit_about" id="summernote" value="{{old('outfit_about', $outfit->about)}}"></textarea>
                     <select name="master_id">
                         @foreach ($masters as $master)
                             <option value="{{$master->id}}" @if($master->id == $outfit->master_id) selected @endif>

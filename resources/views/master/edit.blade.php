@@ -17,7 +17,7 @@
 
                     <div class="form-group">
                         <label>Surname:</label>
-                        <input type="text" name="master_surname" class="form-control" value="{{old('master_surname', $master->name)}}">
+                        <input type="text" name="master_surname" class="form-control" value="{{old('master_surname', $master->surname)}}">
                     </div>
 
                     @csrf
