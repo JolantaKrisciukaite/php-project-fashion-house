@@ -11,12 +11,12 @@
                 <form method="POST" action="{{route('master.store')}}">
 
                     <div class="form-group">
-                        <label>Name</label>
+                        <label>Name:</label>
                         <input type="text" name="master_name" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <label>Surname</label>
+                        <label>Surname:</label>
                         <input type="text" name="master_surname" class="form-control">
                     </div>
 

@@ -11,17 +11,17 @@
                 <form method="POST" action="{{route('outfit.update',[$outfit])}}">
 
                     <div class="form-group">
-                        <label>Type</label>
+                        <label>Type:</label>
                         <input type="text" name="outfit_type" class="form-control" value="{{$outfit->type}}">
                     </div>
 
                     <div class="form-group">
-                        <label>Color</label>
+                        <label>Color:</label>
                         <input type="text" name="outfit_color" class="form-control" value="{{$outfit->color}}">
                     </div>
 
                     <div class="form-group">
-                        <label>Size</label>
+                        <label>Size:</label>
                         <input type="text" name="outfit_size" class="form-control" value="{{$outfit->size}}">
                     </div>
                       
