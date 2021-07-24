@@ -28,7 +28,7 @@
                     About: <textarea name="outfit_about" id="summernote" value="{{old('outfit_about')}}"></textarea>
                     <select class="index" name="master_id">
                         @foreach ($masters as $master)
-                            <option  value="{{$master->id}}">{{$master->name}} {{$master->surname}}</option>
+                            <option value="{{$master->id}}">{{$master->name}} {{$master->surname}}</option>
                         @endforeach
                  </select>
                     @csrf
