@@ -13,7 +13,7 @@
                 <form method="POST" action="{{route('master.destroy', $master)}}">
                     <a href="{{route('master.edit',[$master])}}" class="editButton">Edit</a>
                  @csrf
-                 <button class="editButton" type="submit">Delete</button>
+                 <button class="deleteButton" type="submit">Delete</button>
                 </form>
                 <br>
               @endforeach
