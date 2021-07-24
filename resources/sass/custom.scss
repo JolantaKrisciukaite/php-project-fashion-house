@@ -8,6 +8,7 @@ body {
 
 .card-header {
     background-color: #f6fdec;
+    padding-left:20px;
     font-size:15px;
 }
 
@@ -97,11 +98,20 @@ body {
     line-height: 5px;
 }
 
-.masterIndex {
-    border: 1px solid #ffffff;
+.index {
+    border: 1px solid #ADFF2F;
     border-radius: 6px;
     padding:6px 24px;
     font-size:15px;
-	font-weight:bold;
-    background-color: #a4e271;
+    text-shadow:0px 1px 0px #d2ff93;
+    background-color: #f6fdec;
+}
+
+.form-control {
+    border: 1px solid #ADFF2F;
+    border-radius: 6px;
+    padding:6px 24px;
+    font-size:15px;
+    text-shadow:0px 1px 0px #d2ff93;
+    background-color: #f6fdec;
 }
