@@ -6,7 +6,7 @@
        <div class="col-md-8">
            <div class="card">
                <div class="card-header">
-                   <h3>Outfits</h3>
+                   <h3 class="title">Outfits</h3>
                    <form action="{{route('outfit.index')}}" method="get">
                     <fieldset>
                         <legend>Sort by</legend>
