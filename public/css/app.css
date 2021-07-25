@@ -10194,6 +10194,7 @@ fieldset {
   font-size: 15px;
   text-shadow: 0px 1px 0px #d2ff93;
   background-color: #f6fdec;
+  justify-content: center;
 }
 
 legend {
