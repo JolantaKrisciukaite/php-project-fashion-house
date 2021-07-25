@@ -10190,6 +10190,8 @@ fieldset {
 }
 
 legend {
-  font-size: 15px;
-  margin-top: 30px;
+  font-weight: bold;
+  float: left;
+  margin-bottom: 0.5em;
+  width: 100%;
 }
