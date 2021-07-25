@@ -5,7 +5,26 @@
    <div class="row justify-content-center">
        <div class="col-md-8">
            <div class="card">
-               <div class="card-header">Outfits</div>
+               <div class="card-header">
+                   <h2>Outfits</h2>
+                   <form action="{{route('outfit.index')}}" method="get">
+                    <fieldset>
+                        <legend>Sort by</legend>
+                        <input type="radio" name="sort_by" value="type" checked>
+                        <input type="radio" name="sort_by" value="size">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Sort by</legend>
+                        <input type="radio" name="sort_by" value="type" checked>
+                        <input type="radio" name="sort_by" value="size">
+                    </fieldset>
+                
+                   </form>
+                
+                
+                
+                </div>
 
                <div class="card-body">
                 @foreach ($outfits as $outfit)
