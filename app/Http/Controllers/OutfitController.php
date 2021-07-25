@@ -104,6 +104,7 @@ class OutfitController extends Controller
             'outfit_about' => ['required'],
             'master_id' => ['required', 'integer', 'min:1']
         ],
+        
         );
         
         if ($validator->fails()) {

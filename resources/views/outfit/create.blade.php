@@ -12,34 +12,28 @@
 
                     <div class="form-group">
                         <label>Type:</label>
-                        <input type="text" name="outfit_type" class="form-control" value="{{old('outfit_type')}}">
-                        <span style="createSpan">Enter outfit type</span>
+                        <input placeholder="Enter outfit type" type="text" name="outfit_type" class="form-control" value="{{old('outfit_type')}}">
                     </div>
 
                     <div class="form-group">
                         <label>Color:</label>
-                        <input type="text" name="outfit_color" class="form-control" value="{{old('outfit_color')}}">
-                        <span>Enter outfit color</span>
+                        <input placeholder="Enter outfit color" type="text" name="outfit_color" class="form-control" value="{{old('outfit_color')}}">
                     </div>
 
                     <div class="form-group">
                         <label>Size:</label>
-                        <input type="text" name="outfit_size" class="form-control" value="{{old('outfit_size')}}">
-                        <div class="createDiv">Enter outfit size</div>
+                        <input placeholder="Enter outfit size" type="text" name="outfit_size" class="form-control" value="{{old('outfit_size')}}">
                     </div>
                     
-                    <span class="about">About: </div>
+                    <span class="about">About: </span>
                     <textarea name="outfit_about" id="summernote" value="{{old('outfit_about')}}"></textarea>
                     <select class="index" name="master_id"><br>
-                        
                         @foreach ($masters as $master)
                             <option value="{{$master->id}}">{{$master->name}} {{$master->surname}}</option>
                         @endforeach
-                        <div>About outfit</div>
-                    </select>
+                 </select>
                     @csrf
-                    <button class="addButtonCreate" type="submit">Add</button><br>
-                    <div>Select Master from the list</div>
+                    <button class="addButtonCreate" type="submit">Add</button>
                  </form>
 
                </div>
