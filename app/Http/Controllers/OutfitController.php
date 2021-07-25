@@ -14,11 +14,46 @@ class OutfitController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // $outfits = Outfit::all();
         $outfits = Outfit::orderBy('size', 'desc') -> paginate(15)->withQueryString();
-        return view('outfit.index', ['outfits' => $outfits]);
+
+        $dir = 'asc';
+        $sort = 'type';
+        $defaultMaster = 0;
+        $masters = Master::all();
+        $s = '';
+
+        // Rušiavimas
+
+        // pabaigti šią dalį
+
+        if ($request -> sort_by && $request -> dir) {
+
+            if ('type'== $request -> sort_by && 'asc'== $request -> dir) {
+                $outfits = Outfit::orderBy('type') -> paginate(15)->withQueryString();
+            }
+
+            elseif ('type'== $request -> sort_by && 'desc'== $request -> dir) {
+                $outfits = Outfit::orderBy('type', 'desc') -> paginate(15)->withQueryString();
+                $dir = 'desc';
+            }
+
+            elseif ('size'== $request -> sort_by && 'asc'== $request -> dir) {
+                $outfits = Outfit::orderBy('size') -> paginate(15)->withQueryString();
+                $sort = 'size';
+            }
+
+            elseif ('size'== $request -> sort_by && 'desc'== $request -> dir) {
+                $outfits = Outfit::orderBy('size', 'desc') -> paginate(15)->withQueryString();
+                $dir = 'desc';
+                $sort = 'size';
+            }
+
+            else {
+                $outfit = Outfit::paginate(15)->withQueryString();
+            }
+        } 
     }
 
     /**
