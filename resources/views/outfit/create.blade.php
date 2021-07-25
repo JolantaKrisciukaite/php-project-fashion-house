@@ -25,21 +25,21 @@
                     <div class="form-group">
                         <label>Size:</label>
                         <input type="text" name="outfit_size" class="form-control" value="{{old('outfit_size')}}">
-                        <span>Enter outfit size</span>
+                        <div class="createDiv">Enter outfit size</div>
                     </div>
                     
-                    <span class="about">About: </span>
+                    <span class="about">About: </div>
                     <textarea name="outfit_about" id="summernote" value="{{old('outfit_about')}}"></textarea>
                     <select class="index" name="master_id"><br>
                         
                         @foreach ($masters as $master)
                             <option value="{{$master->id}}">{{$master->name}} {{$master->surname}}</option>
                         @endforeach
-                        <span>About outfit</span>
+                        <div>About outfit</div>
                     </select>
                     @csrf
                     <button class="addButtonCreate" type="submit">Add</button><br>
-                    <span>Select Master from the list</span>
+                    <div>Select Master from the list</div>
                  </form>
 
                </div>
