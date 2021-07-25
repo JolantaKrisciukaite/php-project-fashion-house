@@ -16,7 +16,8 @@ class OutfitController extends Controller
      */
     public function index()
     {
-        $outfits = Outfit::all();
+        // $outfits = Outfit::all();
+        $outfits = Outfit::orderBy('size', 'desc') -> paginate(15)->withQueryString();
         return view('outfit.index', ['outfits' => $outfits]);
     }
 
