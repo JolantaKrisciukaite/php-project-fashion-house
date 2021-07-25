@@ -52,14 +52,15 @@
                                 <legend>Search by</legend>
                                 <input placeholder="Serach by type" type="text" class="index" name="s" value="{{$s}}">
                             </fieldset>
-                            <button class="addButtonCreate" type="submit">Type</button>
+                            <button class="addButtonCreate" type="submit" name="do_search" value="1">Type</button>
                             <a href="{{ route('outfit.index') }}" class="aButton">Clear</button></a>
                         </form>
 
                     </div>
 
                     <div class="card-body">
-                        @foreach ($outfits as $outfit)
+
+                        @forelse ($outfits as $outfit)
                             <div class="index">Outfit: {{ $outfit->type }}</div>
                             <div class="index">Outfit size: {{ $outfit->size }}</div>
                             <div class="index">Master: {{ $outfit->outfitMaster->name }}
@@ -69,7 +70,10 @@
                                 @csrf
                                 <button class="deleteButtonOutfit" type="submit">Delete</button>
                             </form><br>
-                        @endforeach
+
+                            @empty 
+                            <h3 class="title">No Results 😛</h3>
+                        @endforelse
 
                     </div>
                 </div>
