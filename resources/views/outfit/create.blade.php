@@ -19,13 +19,13 @@
                     <div class="form-group">
                         <label>Color:</label>
                         <input type="text" name="outfit_color" class="form-control" value="{{old('outfit_color')}}">
-                        <span style="createSpan">Enter outfit color</span>
+                        <span>Enter outfit color</span>
                     </div>
 
                     <div class="form-group">
                         <label>Size:</label>
                         <input type="text" name="outfit_size" class="form-control" value="{{old('outfit_size')}}">
-                        <span style="createSpan">Enter outfit size</span>
+                        <span>Enter outfit size</span>
                     </div>
                     
                     <span class="about">About: </span>
@@ -35,11 +35,11 @@
                         @foreach ($masters as $master)
                             <option value="{{$master->id}}">{{$master->name}} {{$master->surname}}</option>
                         @endforeach
-                        <span style="createSpan">About outfit</span>
+                        <span>About outfit</span>
                     </select>
                     @csrf
                     <button class="addButtonCreate" type="submit">Add</button><br>
-                    <span style="createSpan">Select Master from the list</span>
+                    <span>Select Master from the list</span>
                  </form>
 
                </div>
