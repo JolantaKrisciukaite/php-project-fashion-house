@@ -37,7 +37,7 @@
                 <form method="POST" action="{{route('outfit.destroy', [$outfit])}}">
                     <a href="{{route('outfit.edit',[$outfit])}}" class="editButton">Edit</a>
                  @csrf
-                 <button class="deleteButtonOutfit" type="submit">Delete</button>
+                 <br><button class="deleteButtonOutfit" type="submit">Delete</button>
                 </form>
                 <br>
               @endforeach
