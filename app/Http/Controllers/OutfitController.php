@@ -24,6 +24,7 @@ class OutfitController extends Controller
         $masters = Master::all();
         $s = '';
 
+
         // Rušiavimas
 
         // pabaigti šią dalį
@@ -53,14 +54,28 @@ class OutfitController extends Controller
             else {
                 $outfit = Outfit::paginate(15)->withQueryString();
             }
-
         } 
 
         // Filtravimas
 
-         elseif ($request -> master_id) {
+        elseif ($request -> master_id) {
             $outfits = Outfit::where('master_id', (int)$request -> master_id) -> paginate(15)->withQueryString();
             $defaultMaster = (int)$request -> master_id;
+        }
+
+        // Paieška
+
+        elseif ($request -> s) {
+            $outfits = Outfit::where('type', 'like', '%'.$request -> s.'%') -> paginate(15)->withQueryString();
+            $s = $request -> s;
+        }
+        
+        elseif ($request -> do_search) {
+            $outfits = Outfit::where('type', 'like', '') -> paginate(15)->withQueryString();
+        }
+
+        else {
+            $outfits = Outfit::paginate(15)->withQueryString();
         }
 
         return view('outfit.index', [

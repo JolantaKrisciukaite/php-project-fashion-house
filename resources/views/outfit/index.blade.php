@@ -49,8 +49,8 @@
 
                         <form action="{{ route('outfit.index') }}" method="get" class="sort-form">
                             <fieldset class="fieldset">
-                                <legend>Serch by type</legend>
-                                <input type="text" class="index" name="s">
+                                <legend>Search by</legend>
+                                <input placeholder="Serach by type" type="text" class="index" name="s" value="{{$s}}">
                             </fieldset>
                             <button class="addButtonCreate" type="submit">Type</button>
                             <a href="{{ route('outfit.index') }}" class="aButton">Clear</button></a>
