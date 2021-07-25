@@ -37,7 +37,9 @@
                                 <legend>Filter by</legend>
                                 <select class="index" name="master_id"><br>
                                     @foreach ($masters as $master)
-                                        <option value="{{ $master->id }}">{{ $master->name }} {{ $master->surname }}</option>
+                                        <option value="{{ $master->id }}" @if($defaultMaster == $master->id) selected @endif>
+                                            {{ $master->name }} {{ $master->surname }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </fieldset>
