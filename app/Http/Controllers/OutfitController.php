@@ -53,7 +53,17 @@ class OutfitController extends Controller
             else {
                 $outfit = Outfit::paginate(15)->withQueryString();
             }
+
         } 
+        
+        return view('outfit.index', [
+            'outfits' => $outfits,
+            'dir' => $dir,
+            'sort' => $sort,
+            'masters' => $masters,
+            'defaultMaster' => $defaultMaster,
+            's' => $s
+        ]);
     }
 
     /**
