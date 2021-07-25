@@ -9,6 +9,11 @@ use Validator;
 
 class OutfitController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +21,7 @@ class OutfitController extends Controller
      */
     public function index(Request $request)
     {
-        $outfits = Outfit::orderBy('type', 'asc') -> paginate(15)->withQueryString();
+        $outfits = Outfit::orderBy('type', 'asc') -> paginate(10)->withQueryString();
 
         $dir = 'asc';
         $sort = 'type';
@@ -32,50 +37,50 @@ class OutfitController extends Controller
         if ($request -> sort_by && $request -> dir) {
 
             if ('type'== $request -> sort_by && 'asc'== $request -> dir) {
-                $outfits = Outfit::orderBy('type') -> paginate(15)->withQueryString();
+                $outfits = Outfit::orderBy('type') -> paginate(10)->withQueryString();
             }
 
             elseif ('type'== $request -> sort_by && 'desc'== $request -> dir) {
-                $outfits = Outfit::orderBy('type', 'desc') -> paginate(15)->withQueryString();
+                $outfits = Outfit::orderBy('type', 'desc') -> paginate(10)->withQueryString();
                 $dir = 'desc';
             }
 
             elseif ('size'== $request -> sort_by && 'asc'== $request -> dir) {
-                $outfits = Outfit::orderBy('size') -> paginate(15)->withQueryString();
+                $outfits = Outfit::orderBy('size') -> paginate(10)->withQueryString();
                 $sort = 'size';
             }
 
             elseif ('size'== $request -> sort_by && 'desc'== $request -> dir) {
-                $outfits = Outfit::orderBy('size', 'desc') -> paginate(15)->withQueryString();
+                $outfits = Outfit::orderBy('size', 'desc') -> paginate(10)->withQueryString();
                 $dir = 'desc';
                 $sort = 'size';
             }
 
             else {
-                $outfit = Outfit::paginate(15)->withQueryString();
+                $outfit = Outfit::paginate(10)->withQueryString();
             }
         } 
 
         // Filtravimas
 
         elseif ($request -> master_id) {
-            $outfits = Outfit::where('master_id', (int)$request -> master_id) -> paginate(15)->withQueryString();
+            $outfits = Outfit::where('master_id', (int)$request -> master_id) -> paginate(10)->withQueryString();
             $defaultMaster = (int)$request -> master_id;
         }
 
         // Paieška
 
         elseif ($request -> s) {
-            $outfits = Outfit::where('type', 'like', '%'.$request -> s.'%') -> paginate(15)->withQueryString();
+            $outfits = Outfit::where('type', 'like', '%'.$request -> s.'%') -> paginate(10)->withQueryString();
             $s = $request -> s;
         }
         
         elseif ($request -> do_search) {
-            $outfits = Outfit::where('type', 'like', '') -> paginate(15)->withQueryString();
+            $outfits = Outfit::where('type', 'like', '') -> paginate(10)->withQueryString();
         }
 
         else {
-            $outfits = Outfit::paginate(15)->withQueryString();
+            $outfits = Outfit::paginate(10)->withQueryString();
         }
 
         return view('outfit.index', [

@@ -58,6 +58,10 @@
 
                     </div>
 
+                <div class="pager-links">
+                {{ $outfits->links() }}
+                </div>
+
                     <div class="card-body">
 
                         @forelse ($outfits as $outfit)
@@ -76,7 +80,8 @@
                         @endforelse
 
                     </div>
-                </div>
+                <div class="pager-links">
+                {{ $outfits->links() }}
             </div>
         </div>
     </div>
