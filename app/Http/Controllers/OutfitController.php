@@ -100,7 +100,7 @@ class OutfitController extends Controller
         [
             'outfit_type' => ['required', 'min:3', 'max:50'],
             'outfit_color' => ['required', 'min:3', 'max:20'],
-            'outfit_size' => ['required', 'min:1', 'max:22'],
+            'outfit_size' => ['required', 'integer', 'min:1', 'max:22'],
             'outfit_about' => ['required'],
             'master_id' => ['required', 'integer', 'min:1']
         ],

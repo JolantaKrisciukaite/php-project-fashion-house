@@ -13,11 +13,11 @@
                         <input type="radio" name="sort_by" value="type" checked>
                         <input type="radio" name="sort_by" value="size">
                     </fieldset>
-                    
+
                     <fieldset>
-                        <legend>Sort by</legend>
-                        <input type="radio" name="sort_by" value="type" checked>
-                        <input type="radio" name="sort_by" value="size">
+                        <legend>Direction</legend>
+                        <input type="radio" name="dir" value="asc" checked>
+                        <input type="radio" name="dir" value="desc">
                     </fieldset>
                 
                    </form>
