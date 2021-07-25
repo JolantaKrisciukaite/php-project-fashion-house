@@ -179,7 +179,8 @@ body {
 .title {
 	padding: 20px;
 	padding-left: 2px;
-	font-size: 20px;
+	font-size: 24px;
+	color: #528009;
 }
 
 fieldset {
@@ -189,6 +190,7 @@ fieldset {
     font-size:15px;
     text-shadow:0px 1px 0px #d2ff93;
     background-color: #f6fdec;
+	display: flex;
 }
 
 legend {
@@ -198,4 +200,9 @@ legend {
   	margin-bottom: .5em;
   	width: 100%;
 }
+
+.sort_by {
+	color: #528009;
+}
+
 

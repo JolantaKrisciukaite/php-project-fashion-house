@@ -10182,7 +10182,9 @@ body {
 
 .title {
   padding: 20px;
-  padding-left: 20px;
+  padding-left: 2px;
+  font-size: 24px;
+  color: #528009;
 }
 
 fieldset {
@@ -10200,4 +10202,8 @@ legend {
   float: left;
   margin-bottom: 0.5em;
   width: 100%;
+}
+
+.sort_by {
+  color: #528009;
 }

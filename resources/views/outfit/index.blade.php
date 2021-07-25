@@ -16,8 +16,12 @@
 
                     <fieldset>
                         <legend>Direction</legend>
-                        <input type="radio" name="dir" value="asc" checked>
-                        <input type="radio" name="dir" value="desc">
+                        <div>
+                            <label>Asc</label><input type="radio" name="dir" value="asc" checked>
+                        </div>
+                        <div>
+                            <label>Dsc</label><input type="radio" name="dir" value="desc">
+                        </div>
                     </fieldset>
                 
                    </form>
