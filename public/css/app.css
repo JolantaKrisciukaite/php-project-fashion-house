@@ -10013,6 +10013,7 @@ body {
 .card-header {
   background-color: #f6fdec;
   padding-left: 20px;
+  padding-bottom: 20px;
   font-size: 15px;
 }
 
