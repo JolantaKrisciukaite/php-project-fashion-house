@@ -6,14 +6,13 @@
        <div class="col-md-8">
            <div class="card">
                <div class="card-header">
+
                    <h3 class="title">Outfits</h3>
-                   <form action="{{route('outfit.index')}}" method="get">
+                   <form action="{{route('outfit.index')}}" method="get" class="sort-form">
                     <fieldset>
                         <legend>Sort by</legend>
                         <div>
                         <label>Type</label><input type="radio" name="sort_by" value="type" checked>
-                        </div>
-                        <div>
                         <label>Size</label><input type="radio" name="sort_by" value="size">
                         </div>
                     </fieldset>
@@ -22,15 +21,11 @@
                         <legend>Direction</legend>
                         <div>
                             <label>Asc</label><input type="radio" name="dir" value="asc" checked>
-                        </div>
-                        <div>
                             <label>Dsc</label><input type="radio" name="dir" value="desc">
                         </div>
                     </fieldset>
-                
+                    <button class="addButtonCreate" type="submit">Sort</button>
                    </form>
-                
-                
                 
                 </div>
 

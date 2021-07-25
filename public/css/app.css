@@ -10188,15 +10188,15 @@ body {
 }
 
 fieldset {
-  border: 1px solid #cffd8b;
+  border: 1px solid #ADFF2F;
   border-radius: 6px;
   padding: 6px 24px;
   font-size: 15px;
   text-shadow: 0px 1px 0px #d2ff93;
-  background-color: #d2ff8f;
+  background-color: #d2ff93;
 }
 fieldset input {
-  margin-left: 8px;
+  margin: 8px;
 }
 
 legend {
@@ -10209,4 +10209,10 @@ legend {
 
 .sort_by {
   color: #528009;
+}
+
+.sort-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
