@@ -10,8 +10,12 @@
                    <form action="{{route('outfit.index')}}" method="get">
                     <fieldset>
                         <legend>Sort by</legend>
-                        <input type="radio" name="sort_by" value="type" checked>
-                        <input type="radio" name="sort_by" value="size">
+                        <div>
+                        <label>Type</label><input type="radio" name="sort_by" value="type" checked>
+                        </div>
+                        <div>
+                        <label>Size</label><input type="radio" name="sort_by" value="size">
+                        </div>
                     </fieldset>
 
                     <fieldset>
