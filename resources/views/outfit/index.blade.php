@@ -12,19 +12,36 @@
                             <fieldset>
                                 <legend>Sort by</legend>
                                 <div>
-                                    <label>Type</label><input type="radio" name="sort_by" value="type" checked>
-                                    <label>Size</label><input type="radio" name="sort_by" value="size">
+                                    <label>Type</label>
+                                    <input type="radio" name="sort_by" value="type" @if ('type' == $sort) checked @endif>
+                                    <label>Size</label>
+                                    <input type="radio" name="sort_by" value="size" @if ('size' == $sort) checked @endif>
                                 </div>
                             </fieldset>
 
                             <fieldset>
                                 <legend>Direction</legend>
                                 <div>
-                                    <label>Asc</label><input type="radio" name="dir" value="asc" checked>
-                                    <label>Dsc</label><input type="radio" name="dir" value="desc">
+                                    <label>Asc</label>
+                                    <input type="radio" name="dir" value="asc" @if ('asc' == $dir) checked @endif>
+                                    <label>Dsc</label>
+                                    <input type="radio" name="dir" value="desc" @if ('desc' == $dir) checked @endif>
                                 </div>
                             </fieldset>
                             <button class="addButtonCreate" type="submit">Sort</button>
+                            <a href="{{ route('outfit.index') }}" class="aButton">Clear</button></a>
+                        </form>
+
+                        <form action="{{ route('outfit.index') }}" method="get" class="sort-form">
+                            <fieldset class="fieldset">
+                                <legend>Filter by</legend>
+                                <select class="index" name="master_id"><br>
+                                    @foreach ($masters as $master)
+                                        <option value="{{ $master->id }}">{{ $master->name }} {{ $master->surname }}</option>
+                                    @endforeach
+                                </select>
+                            </fieldset>
+                            <button class="addButtonCreate" type="submit">Filter</button>
                             <a href="{{ route('outfit.index') }}" class="aButton">Clear</button></a>
                         </form>
 

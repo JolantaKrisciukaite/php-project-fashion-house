@@ -10248,3 +10248,8 @@ legend {
 .sort-form a {
   margin-left: 4px;
 }
+
+.fieldset {
+  padding-right: 50px;
+  margin-top: 6px;
+}

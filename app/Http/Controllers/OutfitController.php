@@ -16,7 +16,7 @@ class OutfitController extends Controller
      */
     public function index(Request $request)
     {
-        $outfits = Outfit::orderBy('size', 'desc') -> paginate(15)->withQueryString();
+        $outfits = Outfit::orderBy('type', 'asc') -> paginate(15)->withQueryString();
 
         $dir = 'asc';
         $sort = 'type';
@@ -55,7 +55,14 @@ class OutfitController extends Controller
             }
 
         } 
-        
+
+        // Filtravimas
+
+         elseif ($request -> master_id) {
+            $outfits = Outfit::where('master_id', (int)$request -> master_id) -> paginate(15)->withQueryString();
+            $defaultMaster = (int)$request -> master_id;
+        }
+
         return view('outfit.index', [
             'outfits' => $outfits,
             'dir' => $dir,
